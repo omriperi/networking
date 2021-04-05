@@ -1,9 +1,9 @@
- show running
+do  show running
 Building configuration...
 
-Current configuration : 1189 bytes
+Current configuration : 1206 bytes
 !
-! Last configuration change at 12:07:16 UTC Mon Mar 29 2021
+! Last configuration change at 11:50:11 UTC Mon Apr 5 2021
 !
 version 15.2
 service timestamps debug datetime msec
@@ -62,6 +62,7 @@ interface FastEthernet0/0
  ip address 192.168.23.2 255.255.255.0
  ip ospf 1 area 0
  duplex full
+ mpls ip
 !
 interface GigabitEthernet1/0
   no shut
@@ -74,6 +75,7 @@ interface FastEthernet2/0
  ip address 192.168.24.2 255.255.255.0
  ip ospf 1 area 0
  duplex full
+ mpls ip
 !
 interface FastEthernet3/0
   no shut
@@ -116,4 +118,4 @@ line vty 0 4
 !
 end
 
-R2#
+R2(config)#
